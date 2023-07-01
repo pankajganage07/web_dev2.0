@@ -1,0 +1,16 @@
+{
+  "name": "qr_generator",
+  "version": "1.0.0",
+  "description": "qr code qenerotor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.7",
+    "qr-image": "^3.2.0"
+  }
+}
