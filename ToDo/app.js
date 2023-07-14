@@ -15,7 +15,7 @@ main().catch(err => console.log(err));
 async function main() {
 
 //creating and connecting to our data base
-mongoose.connect('mongodb://127.0.0.1:27017/todoDB');
+mongoose.connect('mongodb+srv://pankajganage22:Pjsrc22960@cluster0.9onrxes.mongodb.net/ToDoDB?retryWrites=true&w=majority');
 
 const itemSchema = new mongoose.Schema({
   name: String
@@ -24,15 +24,15 @@ const itemSchema = new mongoose.Schema({
 const Item = mongoose.model('Item', itemSchema);
 
 const i1 = new Item({
-  name: 'tsk1'
+  name: 'Welcome to my to do app'
 });
 
 const i2 = new Item({
-  name: 'tsk2'
+  name: 'click + to add task'
 });
 
 const i3 = new Item({
-  name: 'tsk3'
+  name: '<-- to delete task'
 });
 
  
