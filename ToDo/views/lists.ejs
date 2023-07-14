@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+
+<div class="box" id="heading">
+  <h1><%= listTitle %></h1>
+</div>
+
+<div class="box">
+  <% passingvalue.forEach((i)=>{ %>
+
+  <form action="/delete" method="post">
+    <div class="item">
+      <input type="checkbox" value="<%= i._id %>" name="checkbox" onchange="this.form.submit()" />
+      <p><%= i.name %></p>
+    </div>
+    <input type="hidden" name="ListName" value="<%=listTitle%>" />
+  </form>
+
+  <% }); %>
+
+  <form class="item" action="/" method="post">
+    <input
+      type="text"
+      name="taskinput"
+      value=""
+      placeholder="New Item"
+      autocomplete="off"
+    />
+    <button type="submit" name="list" value="<%= listTitle %>">+</button>
+  </form>
+</div>
+
+<%- include('footer'); -%>
